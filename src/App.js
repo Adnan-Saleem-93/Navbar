@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import {SocialMedia, NavLinks} from "./constants";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
+  const [showLinks, setShowLinks] = useState(false);
+
   return (
     <section className="navbar">
       <h1 className="home">
-        <a href="/">Nav App</a>
+        <a href="/">NavApp</a>
       </h1>
       <article className="nav-links">
         {NavLinks.map((link, index) => {
@@ -28,12 +32,19 @@ function App() {
               key={index}
               id={`social-link-${id}`}
               className="social-link"
+              target="_blank"
+              rel="noreferrer"
             >
               {icon}
             </a>
           );
         })}
       </article>
+      <FontAwesomeIcon
+        icon={faBars}
+        className="nav-toggle"
+        onClick={() => setShowLinks(!showLinks)}
+      />
     </section>
   );
 }
