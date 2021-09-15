@@ -1,56 +1,51 @@
-import React from "react";
-import {FaBehance, FaFacebook, FaLinkedin, FaTwitter} from "react-icons/fa";
+import React from 'react'
+import {FaBehance, FaFacebook, FaLinkedin, FaTwitter} from 'react-icons/fa'
 export const NavLinks = [
   {
     id: 1,
-    url: "/",
-    text: "home"
+    url: '/about',
+    text: 'about'
   },
   {
     id: 2,
-    url: "/about",
-    text: "about"
+    url: '/projects',
+    text: 'projects'
   },
   {
     id: 3,
-    url: "/projects",
-    text: "projects"
+    url: '/contact',
+    text: 'contact'
   },
   {
     id: 4,
-    url: "/contact",
-    text: "contact"
-  },
-  {
-    id: 5,
-    url: "/profile",
-    text: "profile"
+    url: '/profile',
+    text: 'profile'
   }
-];
+]
 
 export const SocialMedia = [
   {
     id: 1,
-    url: "https://www.facebook.com/",
+    url: 'https://www.facebook.com/',
     icon: <FaFacebook />,
-    title: "Facebook"
+    title: 'Facebook'
   },
   {
     id: 2,
-    url: "https://www.twitter.com",
+    url: 'https://www.twitter.com',
     icon: <FaTwitter />,
-    title: "Twitter"
+    title: 'Twitter'
   },
   {
     id: 3,
-    url: "https://www.linkedin.com",
+    url: 'https://www.linkedin.com',
     icon: <FaLinkedin />,
-    title: "LinkedIn"
+    title: 'LinkedIn'
   },
   {
     id: 4,
-    url: "https://www.behance.net",
+    url: 'https://www.behance.net',
     icon: <FaBehance />,
-    title: "Behance"
+    title: 'Behance'
   }
-];
+]

@@ -1,6 +1,11 @@
 .home,
-.social-media {
+.social-media-area {
   margin: 0 !important;
+  transition: all 200ms linear;
+}
+
+.home:hover {
+  transform: scale(1.25);
 }
 .navbar {
   box-shadow: 0 0 20px gray;
@@ -17,9 +22,15 @@
   overflow: hidden;
   margin: 0 -15px;
 }
-.nav-links {
+ul {
   list-style-type: none;
+}
+.social-media-area {
+  overflow: hidden;
+}
+.nav-links {
   padding: 0;
+  margin: 5px 0;
 }
 a {
   text-decoration: none;
@@ -40,6 +51,9 @@ a {
 /* #region social media section */
 .social-media {
   display: flex !important;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 .social-link {
   margin: 0 1rem;
@@ -76,6 +90,7 @@ a {
   color: #1a1d4ad9 !important;
   font-size: x-large;
   transition: all 200ms linear;
+  cursor: pointer;
 }
 .rotate-toggle {
   transform: rotate(-90deg) !important;
@@ -85,24 +100,19 @@ a {
   .nav-toggle {
     display: block !important;
   }
-  .social-media {
-    display: none !important;
-  }
 
   .nav-links li {
-    padding: 10px 0px !important;
-  }
-  .links-area {
-    padding: 1rem 0;
+    padding: 10px 0 !important;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 801px) {
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .links-area {
+  .links-area,
+  .social-media-area {
     height: auto !important;
   }
   .nav-links {
